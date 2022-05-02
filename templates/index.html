@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %} {% block content %}
+<section class="bg-blue text-light pb2">
+  <div class="container">
+    <div class="showcase">
+      <div>
+        <h2 class="text-light">Hello</h2>
+        <p class="pb2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae,
+          aliquid soluta a enim incidunt tenetur quidem doloribus hic
+          repudiandae assumenda cum tempore nesciunt, at, laborum nisi debitis
+          blanditiis nulla sapiente.
+        </p>
+        <div class="btn"><a href="#">Button</a></div>
+      </div>
+      <img
+        class="headshot"
+        src="{{ url_for('static', filename = 'img/index/avatar.png.webp') }}"
+        alt="head-shot"
+      />
+    </div>
+  </div>
+</section>
+<section id="recent" class="pt4">
+  <div class="container">
+    <h2 class="tc">Recent Posts</h2>
+    {% with pages=pages %} {% include "layouts/_recent_post_list.html" %} {%
+    endwith %}
+  </div>
+</section>
+{% endblock %}

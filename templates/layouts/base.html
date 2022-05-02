@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="{% if page %}{{page.title}} - {{page.subtitle}}{% elif tag %}{{title}}{% else %} {{ description }}{% endif %}"
+    />
+    <meta name="robots" content="none" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/style.css') }}"
+    />
+    <title>
+      {% if page %} {{page.title}} | {{name}} {% else %} {{title}} {% endif %}
+    </title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger" />
+      <div class="nav-items">
+        <a class="nav-links" href="/">home</a>
+        <a class="nav-links" href="/posts">posts</a>
+        <a class="nav-links" href="/about">about</a>
+        <a class="nav-links" href="/terms">terms</a>
+      </div>
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+    <footer class="bg-blue">
+      <div class="btn"><a href="#">TOP</a></div>
+      <p>&copy;2022 | url</p>
+    </footer>
+  </body>
+</html>

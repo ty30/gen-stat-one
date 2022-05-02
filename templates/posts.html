@@ -1,0 +1,9 @@
+{% extends "layouts/base.html" %} {% block content %}
+<section class="bg-white">
+  <div class="container py3">
+    <h1>Posts</h1>
+    {% with pages=pages %} {% include "layouts/_posts_list.html" %} {% endwith
+    %}
+  </div>
+</section>
+{% endblock %}

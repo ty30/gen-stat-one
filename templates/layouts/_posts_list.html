@@ -1,0 +1,25 @@
+<div class="posts-list-container">
+{% for page in pages %}
+    <div class="posts-list">
+        <div class="posts-list-title">
+            <h2>{{ page.title }}</h2>
+            <p>Author: {{ page.author }}</p>
+            <p>Pub {{ page.date.strftime('%d %b %Y') }}</p>
+            {% if page.meta.tags|length %}
+            <p>Tags
+            <span>
+                {% for page_tag in page.meta.tags %}
+                    <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+                {% endfor %}
+            </span></p>
+            {% endif %}
+        </div>
+        <div class="posts-list-body">
+            {{ page.html|safe|truncate }}
+            <p><a href="{{ url_for("page", path=page.path) }}">Read More...</a></p>
+        </div>
+    </div>
+{% else %}
+    <li>No Posts</li>
+{% endfor %}
+</div>

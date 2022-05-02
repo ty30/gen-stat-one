@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %} {% block content %}
+<section>
+  <div class="container pt4 pb4">
+    <div class="post-page">
+      <a href="https://tydc.me/posts">↵ Back</a>
+      <h2 class="pt2">{{ page.title }}</h2>
+      <h3>{{ page.subtitle }}</h3>
+      <p>
+        Published on {{ page.date.strftime('%d %b %Y') }} by
+        <span>{{page.author}}</span>
+      </p>
+      {{ page.html|safe}}
+    </div>
+  </div>
+</section>
+{% endblock content %}

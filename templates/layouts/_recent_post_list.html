@@ -1,0 +1,17 @@
+{% for page in pages %}
+    <div class="recent-posts">
+        <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+        <p>Author: {{ page.author }}</p>
+        <p>Pub {{ page.date.strftime('%d %b %Y') }}</p>
+    {% if page.meta.tags|length %}
+        <p>Tags
+        <span>
+        {% for page_tag in page.meta.tags %}
+            <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+        {% endfor %}
+        </span></p>
+    {% endif %}
+    </div>
+{% else %}
+    <li>No Posts</li>
+{% endfor %}
