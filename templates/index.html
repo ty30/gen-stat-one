@@ -1,23 +1,21 @@
 {% extends "layouts/base.html" %} {% block content %}
-<section class="bg-blue text-light pb2">
-  <div class="container">
-    <div class="showcase">
-      <div>
-        <h2 class="text-light">Hello</h2>
-        <p class="pb2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae,
-          aliquid soluta a enim incidunt tenetur quidem doloribus hic
-          repudiandae assumenda cum tempore nesciunt, at, laborum nisi debitis
-          blanditiis nulla sapiente.
-        </p>
-        <div class="btn"><a href="#">Button</a></div>
-      </div>
-      <img
-        class="headshot"
-        src="{{ url_for('static', filename = 'img/index/avatar.png.webp') }}"
-        alt="head-shot"
-      />
+<section class="container pb4">
+  <div class="showcase">
+    <div>
+      <h2>Hello</h2>
+      <p class="pb2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae,
+        aliquid soluta a enim incidunt tenetur quidem doloribus hic repudiandae
+        assumenda cum tempore nesciunt, at, laborum nisi debitis blanditiis
+        nulla sapiente.
+      </p>
+      <a href="#">Read More...</a>
     </div>
+    <img
+      class="headshot"
+      src="{{ url_for('static', filename = 'img/index/avatar.jpeg') }}"
+      alt="head-shot"
+    />
   </div>
 </section>
 <section id="recent" class="pt4">
