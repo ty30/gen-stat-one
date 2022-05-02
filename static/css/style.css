@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #43613d;
+  --primary-color: #2e2e2e;
   --secondary-color: #c08a5d;
   --lite-color: #f1f1f1;
   --dark-color: #222;
@@ -165,6 +165,8 @@ a:hover {
 /* Intro */
 .showcase {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .headshot {
@@ -225,9 +227,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  color: #f1f1f1;
-  gap: 1rem;
-  padding: 2rem 0;
+  height: 80px;
 }
 /* 404 */
 #error-handling {
