@@ -15,7 +15,7 @@ There's some instructions to get it working. Use them, don't use them, what am I
 ## How-To install for Ubuntu Linux 20.04 (adjust for your OS):
 
 ```
-git clone
+git clone https://github.com/ty30/gen-stat-one
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirement.txt
