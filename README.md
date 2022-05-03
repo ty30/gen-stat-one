@@ -18,7 +18,7 @@ There's some instructions to get it working. Use them, don't use them, what am I
 git clone https://github.com/ty30/gen-stat-one
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ## Run App:
